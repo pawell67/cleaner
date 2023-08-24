@@ -1,0 +1,28 @@
+{
+  "name": "pawell67/cleaner",
+  "description": "Automates moving PHP tool configuration files to a separate directory.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Paweł Wankiewicz",
+      "email": "pawellwankiewicz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pawell67\\Cleaner\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.1"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Pawell67\\Cleaner\\Cleaner::initialize"
+    ],
+    "post-update-cmd": [
+      "Pawell67\\Cleaner\\Cleaner::initialize"
+    ]
+  }
+}
